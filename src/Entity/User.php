@@ -48,6 +48,7 @@ class User
      * @ORM\Column(type="boolean")
      */
     private $bloger;
+    private $remember_me;
 
     public function getId(): ?int
     {
@@ -113,5 +114,21 @@ class User
         $this->bloger = $bloger;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRememberMe()
+    {
+        return $this->remember_me;
+    }
+
+    /**
+     * @param mixed $remember_me
+     */
+    public function setRememberMe($remember_me): void
+    {
+        $this->remember_me = $remember_me;
     }
 }
