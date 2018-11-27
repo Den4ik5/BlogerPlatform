@@ -1,3 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+    {#    {{ parent() }}#}
+
+{% endblock %}
+{% block body %}
     {{ form_start(form, { 'attr':{'novalidate':'novalidate'}})}}
     {{ form_widget(form) }}
     {{ form_end(form) }}
+    <a href="/registration"> registration</a>
+{% endblock %}

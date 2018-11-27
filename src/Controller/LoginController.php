@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace App\Controller;
 
 use App\Entity\User;
@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 class LoginController extends AbstractController
 {
@@ -37,12 +38,11 @@ class LoginController extends AbstractController
             ]);
 
             if ($logedIn){
-             $this->redirectToRoute('main_menu');
+          //   $this->redirectToRoute('main_menu');
             }
             else{
                 echo 'Incorrect email or password, please try again!';
             }
-
         }
 
         return $this->render('login/index.html.twig',array(

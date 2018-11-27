@@ -1,4 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
 
-        {{ form_start(form, { 'attr':{'novalidate':'novalidate'}})}}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
+    {#    {{ parent() }}#}
+
+{% endblock %}
+{% block body %}
+    {{ form_start(form, { 'attr':{'novalidate':'novalidate'}})}}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <a href="/login"> login</a>
+
+{% endblock %}
+
