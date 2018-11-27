@@ -36,6 +36,9 @@ class LoginController extends AbstractController
                 'email' => $user->getEmail(),
                 'password' => $user->getPassword(),
             ]);
+            var_dump($logedIn);
+
+
 
             if ($logedIn){
           //   $this->redirectToRoute('main_menu');
